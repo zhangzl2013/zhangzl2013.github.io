@@ -4,10 +4,9 @@ layout: default
 
 <article class="index">
 
-  {{ content }}
-
   <h1 class="page-title">Index</h1>
-  <div class="message">All posts</div>
+
+  {{ content }}
 
   {% for post in site.posts %}
     {% assign currentdate = post.date | date: "%Y" %}
