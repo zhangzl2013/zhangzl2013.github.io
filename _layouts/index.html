@@ -24,4 +24,9 @@ layout: default
     </li>
     {% if forloop.last %}</ul>{% endif %}
   {% endfor %}
+
+  {% assign cheatsheets = site.pages | where_exp: "item" , "item.path contains '_cheatsheets'"%}
+  {% for item in cheatsheets %}
+    {{item.title}}
+  {% endfor %}
 </article>
