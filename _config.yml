@@ -1,3 +1,4 @@
 title: zhangzl2013
 description: Personal Blog.
 theme: jekyll-theme-cayman
+include: ['_cheatsheets']
