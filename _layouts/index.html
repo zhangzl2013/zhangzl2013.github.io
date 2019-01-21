@@ -26,7 +26,8 @@ layout: default
   {% endfor %}
 
   {% assign cheatsheets = site.pages | where_exp: "item" , "item.path contains '_cheatsheets'"%}
+  <h2 id="cheatsheets">Cheatsheets</h2>
   {% for item in cheatsheets %}
-    {{item.title}}
+    <li><a href="{{site.baseurl}}{{item.url}}"><span>{{item.title}}</span></a></li>
   {% endfor %}
 </article>
