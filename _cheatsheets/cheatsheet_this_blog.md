@@ -10,6 +10,7 @@ title: cheatsheet_this_blog
   * [Organizing information with tables](https://help.github.com/articles/organizing-information-with-tables/)
   * [Creating and highlighting code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/)
   * [Autolinked references and URLs](https://help.github.com/articles/autolinked-references-and-urls/)
+
 # Jekyll
 * [Jekyll - docs](https://jekyllrb.com/docs/)
 * [Cayman themes](https://github.com/pages-themes/cayman)
