@@ -1,7 +1,8 @@
 ---
-layout:default
-title:cheatsheet_conf
+layout: default
+title: cheatsheet_conf
 ---
+
 # .tmux.conf
 ```conf
 # ~/.tmux.conf
