@@ -149,7 +149,31 @@ cmd |  tee -a output.txt
 cmd |& tee    output.txt
 cmd |& tee -a output.txt
 ```
+# Array
+```bash
+$ # create an array
+$ array1=("value1" "value2" "value3")
+$ # append to the array
+$ array1=(${array1[@]} "value4")
+$ # print elements in array1:
+$ echo "elements in array1 are: ${array1[@]}"
+elements in array1 are: value1 value2 value3 value4
+$ # print the number of elements in the array:
+$ echo "number of elements in array1 is ${#array1[@]}"
+number of elements in array1 is 4
+$ # print length of an element of array1:
+$ echo "length of element 0 in array1 is ${#array1[0]}"
+length of element 0 in array1 is 6
+$ # loop in the array:
+$ for e in ${array1[@]}; do
+>  echo $e
+> done
+value1
+value2
+value3
+value4
 
+```
 # References:
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
 * [string w/o quoting](https://stackoverflow.com/questions/3869072/test-for-non-zero-length-string-in-bash-n-var-or-var) 
