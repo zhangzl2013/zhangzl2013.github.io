@@ -4,7 +4,7 @@ title: cheatsheet_conf
 ---
 
 # .tmux.conf
-```shell-script
+```bash
 # ~/.tmux.conf
 # reload the config: `Ctrl-b: source ~/.tmux.conf`
 
