@@ -4,7 +4,7 @@ title: cheatsheet_conf
 ---
 
 # .tmux.conf
-```Shell
+```shell-script
 # ~/.tmux.conf
 # reload the config: `Ctrl-b: source ~/.tmux.conf`
 
@@ -34,7 +34,7 @@ bind-key -n M-j     select-pane -D
 ```
 
 # .vimrc
-```Vim script
+```vim
 " to reload: `:so %`
 set hlsearch
 set statusline=%f%=(%{&ff})\ row:%l/%L\ col:%v\ [%p%%]
