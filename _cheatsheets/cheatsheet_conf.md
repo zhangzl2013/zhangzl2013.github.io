@@ -8,6 +8,10 @@ title: cheatsheet_conf
 # ~/.tmux.conf
 # reload the config: `Ctrl-b: source ~/.tmux.conf`
 
+# ESC key followed by <n> within 500ms will become Alt+<n>,
+# which is very annoying. Disable it.
+set -s escape-time 0
+
 # switch windows alt+number
 bind-key -n M-0 select-window -t 0
 bind-key -n M-1 select-window -t 1
