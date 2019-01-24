@@ -3,7 +3,8 @@ layout: default
 title: cheatsheet_this_blog
 ---
 # Markdown
-* [Languages Supported by Github Flavored Markdown](http://www.rubycoloredglasses.com/2013/04/languages-supported-by-github-flavored-markdown/)
+* [Creating and highlighting code blocks](https://help.github.com/articles/creating-and-highlighting-code-blocks/)
+* [Valid kerwords for code block languages](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)
 * [Writing on GitHub](https://help.github.com/categories/writing-on-github/)
   * [About writing and formatting on GitHub](https://help.github.com/articles/about-writing-and-formatting-on-github/)
   * [Basic writing and formatting syntax](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
