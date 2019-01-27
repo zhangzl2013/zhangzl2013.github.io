@@ -189,6 +189,7 @@ Export and source:
     [sub] VAR_TOP is: variable_in_topprocess
     [top] VAR_SUB is: variable_in_subprocess
 ```
+
 ### reference
 * [A good answer about source and export](https://askubuntu.com/questions/862236/source-vs-export-vs-export-ld-library-path)
 
