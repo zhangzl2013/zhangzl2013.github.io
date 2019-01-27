@@ -57,72 +57,6 @@ if [ INTEGER1 -ne INTEGER2 ]; then
     echo "INTEGER1 is not equal to INTEGER2"
 fi
 ```
-
-## source vs export
-_source_ variable from subprocess
-
-_export_ variable to subprocess
-```bash
-## subprocess.sh
-
-#!/bin/sh
-
-VAR_SUB="variable_in_subprocess"
-
-echo "    [sub] VAR_TOP is: $VAR_TOP"
-
-```
-```bash
-## topprocess.sh
-
-#!/bin/sh
-
-# normal:
-echo "Normal calling:"
-./subprocess.sh
-echo "    [top] VAR_SUB is: $VAR_SUB"
-
-# export:
-unset VAR_TOP VAR_SUB
-echo "Export variable to sub-process:"
-export VAR_TOP="variable_in_topprocess"
-./subprocess.sh
-echo "    [top] VAR_SUB is: $VAR_SUB"
-
-# source:
-unset VAR_TOP VAR_SUB
-echo "Source variable from sub-process:"
-source ./subprocess.sh
-echo "    [top] VAR_SUB is: $VAR_SUB"
-
-# export and source:
-unset VAR_TOP VAR_SUB
-echo "Export and source:"
-export VAR_TOP="variable_in_topprocess"
-source ./subprocess.sh
-echo "    [top] VAR_SUB is: $VAR_SUB"
-```
-
-```bash
-## testing result:
-
-$ ./topprocess.sh
-Normal calling:
-    [sub] VAR_TOP is:
-    [top] VAR_SUB is:
-Export variable to sub-process:
-    [sub] VAR_TOP is: variable_in_topprocess
-    [top] VAR_SUB is:
-Source variable from sub-process:
-    [sub] VAR_TOP is:
-    [top] VAR_SUB is: variable_in_subprocess
-Export and source:
-    [sub] VAR_TOP is: variable_in_topprocess
-    [top] VAR_SUB is: variable_in_subprocess
-```
-### reference
-* [A good answer about source and export](https://askubuntu.com/questions/862236/source-vs-export-vs-export-ld-library-path)
-
 ## file testing
 ```console
        FILE1 -ef FILE2
@@ -191,6 +125,73 @@ Export and source:
               FILE exists and execute (or search) permission is granted
 
 ```
+
+
+## source vs export
+_source_ variable from subprocess
+
+_export_ variable to subprocess
+```bash
+## subprocess.sh
+
+#!/bin/sh
+
+VAR_SUB="variable_in_subprocess"
+
+echo "    [sub] VAR_TOP is: $VAR_TOP"
+
+```
+```bash
+## topprocess.sh
+
+#!/bin/sh
+
+# normal:
+echo "Normal calling:"
+./subprocess.sh
+echo "    [top] VAR_SUB is: $VAR_SUB"
+
+# export:
+unset VAR_TOP VAR_SUB
+echo "Export variable to sub-process:"
+export VAR_TOP="variable_in_topprocess"
+./subprocess.sh
+echo "    [top] VAR_SUB is: $VAR_SUB"
+
+# source:
+unset VAR_TOP VAR_SUB
+echo "Source variable from sub-process:"
+source ./subprocess.sh
+echo "    [top] VAR_SUB is: $VAR_SUB"
+
+# export and source:
+unset VAR_TOP VAR_SUB
+echo "Export and source:"
+export VAR_TOP="variable_in_topprocess"
+source ./subprocess.sh
+echo "    [top] VAR_SUB is: $VAR_SUB"
+```
+
+```bash
+## testing result:
+
+$ ./topprocess.sh
+Normal calling:
+    [sub] VAR_TOP is:
+    [top] VAR_SUB is:
+Export variable to sub-process:
+    [sub] VAR_TOP is: variable_in_topprocess
+    [top] VAR_SUB is:
+Source variable from sub-process:
+    [sub] VAR_TOP is:
+    [top] VAR_SUB is: variable_in_subprocess
+Export and source:
+    [sub] VAR_TOP is: variable_in_topprocess
+    [top] VAR_SUB is: variable_in_subprocess
+```
+### reference
+* [A good answer about source and export](https://askubuntu.com/questions/862236/source-vs-export-vs-export-ld-library-path)
+
 
 # expr
 ```console
