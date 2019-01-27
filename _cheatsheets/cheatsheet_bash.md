@@ -170,6 +170,23 @@ echo "Export and source:"
 export VAR_TOP="variable_in_topprocess"
 source ./subprocess.sh
 echo "    [top] VAR_SUB is: $VAR_SUB"
+
+# mid
+echo "3 level calling:"
+unset VAR_TOP VAR_SUB
+export VAR_TOP="variable_in_topprocess"
+source ./midprocess.sh
+echo "    [top] VAR_TOP is: $VAR_TOP"
+```
+
+```bash
+## midprocess.sh
+
+#!/bin/sh
+
+echo "    [mid] VAR_TOP is $VAR_TOP"
+VAR_TOP="variable_in_midprocess"
+./subprocess.sh
 ```
 
 ```bash
@@ -188,6 +205,10 @@ Source variable from sub-process:
 Export and source:
     [sub] VAR_TOP is: variable_in_topprocess
     [top] VAR_SUB is: variable_in_subprocess
+3 level calling:
+    [mid] VAR_TOP is variable_in_topprocess
+    [sub] VAR_TOP is: variable_in_midprocess
+    [top] VAR_TOP is: variable_in_midprocess
 ```
 
 ## reference
