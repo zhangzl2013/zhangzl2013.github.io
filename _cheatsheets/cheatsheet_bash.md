@@ -262,6 +262,90 @@ value3
 value4
 
 ```
+# Argument Parsing
+Copied from stackoverflow, see reference.
+
+```bash
+## myscript.sh
+
+#!/bin/bash
+# saner programming env: these switches turn some bugs into errors
+set -o errexit -o pipefail -o noclobber -o nounset
+
+! getopt --test > /dev/null 
+if [[ ${PIPESTATUS[0]} -ne 4 ]]; then
+    echo 'I’m sorry, `getopt --test` failed in this environment.'
+    exit 1
+fi
+
+OPTIONS=dfo:v
+LONGOPTS=debug,force,output:,verbose
+
+# -use ! and PIPESTATUS to get exit code with errexit set
+# -temporarily store output to be able to check for errors
+# -activate quoting/enhanced mode (e.g. by writing out “--options”)
+# -pass arguments only via   -- "$@"   to separate them correctly
+! PARSED=$(getopt --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then
+    # e.g. return value is 1
+    #  then getopt has complained about wrong arguments to stdout
+    exit 2
+fi
+# read getopt’s output this way to handle the quoting right:
+eval set -- "$PARSED"
+
+d=n f=n v=n outFile=-
+# now enjoy the options in order and nicely split until we see --
+while true; do
+    case "$1" in
+        -d|--debug)
+            d=y
+            shift
+            ;;
+        -f|--force)
+            f=y
+            shift
+            ;;
+        -v|--verbose)
+            v=y
+            shift
+            ;;
+        -o|--output)
+            outFile="$2"
+            shift 2
+            ;;
+        --)
+            shift
+            break
+            ;;
+        *)
+            echo "Programming error"
+            exit 3
+            ;;
+    esac
+done
+
+# handle non-option arguments
+if [[ $# -ne 1 ]]; then
+    echo "$0: A single input file is required."
+    exit 4
+fi
+
+echo "verbose: $v, force: $f, debug: $d, in: $1, out: $outFile"
+```
+```bash
+myscript.sh -vfd ./foo/bar/someFile -o /fizz/someOtherFile
+myscript.sh -v -f -d -o/fizz/someOtherFile -- ./foo/bar/someFile
+myscript.sh --verbose --force --debug ./foo/bar/someFile -o/fizz/someOtherFile
+myscript.sh --output=/fizz/someOtherFile ./foo/bar/someFile -vfd
+myscript.sh ./foo/bar/someFile -df -v --output /fizz/someOtherFile
+
+# all return
+
+verbose: y, force: y, debug: y, in: ./foo/bar/someFile, out: /fizz/someOtherFile
+```
+## References:
+* [answer on stackoverflow](https://stackoverflow.com/questions/192249/how-do-i-parse-command-line-arguments-in-bash/29754866#29754866)
 # References:
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
 * [string w/o quoting](https://stackoverflow.com/questions/3869072/test-for-non-zero-length-string-in-bash-n-var-or-var) 
