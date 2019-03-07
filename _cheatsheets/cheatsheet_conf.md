@@ -102,3 +102,9 @@ if has("cscope")
      endif
 endif
 ```
+
+# .gitconfig
+```bash
+[alias]
+        skim = "!f(){ git log --oneline ${1}^..${1}; };f"
+```
