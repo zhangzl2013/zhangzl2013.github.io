@@ -1,6 +1,6 @@
 ---
 layout: default
-title: cheatsheet_bash
+title: cheatsheet_kernel_versions
 ---
 
 Version | Kernel                        | LTS | RHEL  | Debian | Ubuntu| Fedora | Android       | Windriver
