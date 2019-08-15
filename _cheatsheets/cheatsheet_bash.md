@@ -57,6 +57,13 @@ if [ INTEGER1 -ne INTEGER2 ]; then
     echo "INTEGER1 is not equal to INTEGER2"
 fi
 ```
+
+## floating number comparation
+```bash
+if (( $(echo "5.2 > 4.15" | bc -l) )); then
+    echo "OK"
+fi
+```
 ## file testing
 ```console
        FILE1 -ef FILE2
