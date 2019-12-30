@@ -7,7 +7,6 @@ title: "Index"
 * [FreeRDP](https://github.com/FreeRDP/FreeRDP/commits?author=zhangzl2013)
 * bind9
   * [Fix crash caused by race condition in timer creation](https://gitlab.isc.org/isc-projects/bind9/commit/21966423cd7101a60ddfb3cf11f04f71c9fdd7b7)
-* [dhcp](https://github.com/isc-projects/dhcp/commits?author=zhangzl2013)
 * [linux](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=zhaolong+zhang)
 * Yocto
   * [Accelerate out-of-tree kernel module built in eSDK](https://bugzilla.yoctoproject.org/show_bug.cgi?id=13113)
