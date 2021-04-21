@@ -4,7 +4,7 @@ title: "Index"
 ---
 
 ## Contributions
-* [FreeRDP](https://github.com/FreeRDP/FreeRDP/commits?author=zhangzl2013)
+* [FreeRDP](https://github.com/FreeRDP/FreeRDP/pulls?page=1&q=+is%3Apr+author%3A%40me)
 * bind9
   * [Fix crash caused by race condition in timer creation](https://gitlab.isc.org/isc-projects/bind9/commit/21966423cd7101a60ddfb3cf11f04f71c9fdd7b7)
 * [linux](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=zhaolong+zhang)
