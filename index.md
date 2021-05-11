@@ -25,6 +25,11 @@ title: "Index"
 * [linux-rt-devel](https://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-rt-devel.git/)
 * [linux-stable-rt](https://git.kernel.org/pub/scm/linux/kernel/git/rt/linux-stable-rt.git/)
 * [linux-history](https://git.kernel.org/pub/scm/linux/kernel/git/history/history.git/)
+* [phoronix - Linux Kernel](https://www.phoronix.com/scan.php?page=news_topic&q=Linux%20Kernel)
+* 
+### Yocto
+* [Yocto Documentation](https://docs.yoctoproject.org/)
 
 ### Articals
+* [BBC Worklife](https://www.bbc.com/worklife/)
 * [RHEL Knowledgebase - How to Choose Your Red Hat Enterprise Linux File System - Updated September 4 2020](https://access.redhat.com/articles/3129891)
