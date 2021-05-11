@@ -11,3 +11,6 @@ title: "Index"
 * Yocto
   * [Accelerate out-of-tree kernel module built in eSDK](https://bugzilla.yoctoproject.org/show_bug.cgi?id=13113)
   * [yocto-kernel-tools](https://git.yoctoproject.org/cgit/cgit.cgi/yocto-kernel-tools/log/?qt=author&q=zhaolong)
+
+## Bookmarks
+* [RHEL Knowledgebase - How to Choose Your Red Hat Enterprise Linux File System - Updated September 4 2020](https://access.redhat.com/articles/3129891)
