@@ -30,6 +30,9 @@ title: "Index"
 ### Yocto
 * [Yocto Documentation](https://docs.yoctoproject.org/)
 
-### Articles
+### Bookmarks
 * [BBC Worklife](https://www.bbc.com/worklife/)
 * [RHEL Knowledgebase - How to Choose Your Red Hat Enterprise Linux File System - Updated September 4 2020](https://access.redhat.com/articles/3129891)
+
+### Linkedin
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
