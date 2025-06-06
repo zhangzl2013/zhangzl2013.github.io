@@ -18,4 +18,4 @@ title: "Index"
 
 ### Linkedin
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="zhaolong-zhang-foss" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://cn.linkedin.com/in/zhaolong-zhang-foss?trk=profile-badge">Zhaolong Zhang</a></div>
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="zhaolong-zhang-foss" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/zhaolong-zhang-foss?trk=profile-badge">Zhaolong Zhang</a></div>
