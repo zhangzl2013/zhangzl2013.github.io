@@ -10,9 +10,10 @@ title: "Index"
 * [linux](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=zhaolong+zhang)
 * [linuxlists.cc - me](https://linuxlists.cc/profile/51695/Zhaolong_Zhang)
 * Yocto
-  * [meta-amd](https://git.yoctoproject.org/meta-amd)
+  * [meta-amd: Rome, Milan, Genoa, E3000 BSP support on kirkstone branch](https://git.yoctoproject.org/meta-amd/log/?qt=author&q=Zhaolong)
   * [Accelerate out-of-tree kernel module built in eSDK](https://bugzilla.yoctoproject.org/show_bug.cgi?id=13113)
   * [yocto-kernel-tools](https://git.yoctoproject.org/cgit/cgit.cgi/yocto-kernel-tools/log/?qt=author&q=zhaolong)
+  * [linux-yocto: Marvell octeon BSP Reviews](https://git.yoctoproject.org/linux-yocto/log/?h=v5.15%2Fstandard%2Fcn-sdkv6.6%2Focteon&qt=grep&q=Reviewed-by%3A+Zhaolong+Zhang)
 
 
 ### Linkedin
