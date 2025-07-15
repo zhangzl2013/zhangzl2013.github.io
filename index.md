@@ -1,8 +1,3 @@
----
-layout: index
-title: "Index"
----
-
 ## Opensource Contributions
 * [FreeRDP](https://github.com/FreeRDP/FreeRDP/pulls?q=+is%3Apr+author%3Azhangzl2013)
 * bind9
